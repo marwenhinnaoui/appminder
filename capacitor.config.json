@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "appminder",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

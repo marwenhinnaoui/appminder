@@ -1,0 +1,7 @@
+{
+  "name": "appminder",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
