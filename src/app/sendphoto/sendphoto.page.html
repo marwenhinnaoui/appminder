@@ -1,0 +1,8 @@
+<div>
+<div class="cameraPreview" id="cameraPreview" *ngIf="cameraActive">
+
+      <img src="../../assets/filter-1.png" alt="">
+
+</div>
+<ion-button *ngIf="!cameraActive" (click)="getCamera()">Camera</ion-button>
+<div>

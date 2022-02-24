@@ -1,0 +1,82 @@
+.Navbar{
+  justify-content: flex-start !important;
+  ion-button{
+    --background: none;
+    --box-shadow:none;
+    --width:10px !important;
+  }
+  ion-icon{
+    font-size: 25px !important;
+    margin-right: 18px;
+  }
+  h2{
+    margin: -3px 0 0 0 !important;
+  }
+}
+.Content{
+  padding: 10px 5px 15px 0 !important;
+  .Custom_card{
+    display: flex;
+    padding: 0 !important;
+    width: 100%;
+    padding: 7px;
+  .Card_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .Card_more_details, .button-native{
+      // --background:var(--ion-color-danger) !important;
+      --border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      --padding-top: 0;
+      --padding-bottom: 0;
+      --padding-start: 0 !important;
+      --padding-end: 0 !important;
+      ion-icon{
+        padding: 0 !important;
+        font-size: 18px;
+        color: #fff;
+
+      }
+    }
+  }
+  .Card_info{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    padding: 10px;
+    position: relative;
+    align-items: center;
+    width: 90%;
+    h5{
+      font-weight: 600;
+      font-size: 18px;
+      margin: 0 !important;
+    }
+    h5.Sujet{
+      font-weight: 400;
+      font-size: 22px;
+      width: 80%;
+      word-wrap: break-word !important;
+    }
+  }
+  .Rec_time{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding:0 20px 0 0;
+  }
+}
+
+}
+
+  ion-fab-button{
+    --background: #334FDF;
+    margin: 10px 10px 10px 0 !important;
+  }
+  ion-icon{
+    font-size: 27px;
+    font-weight: 900 !important;
+  }

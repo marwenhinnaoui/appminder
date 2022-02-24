@@ -1,0 +1,14 @@
+<div class="Calendar">
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+<ul class="days">
+    <li *ngFor="let day of days"><span *ngIf="day===currentDay" class="active"> {{day}}</span><span *ngIf="day!==currentDay"> {{day}}</span> </li>
+</ul>
+</div>

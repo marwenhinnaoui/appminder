@@ -1,0 +1,31 @@
+.Navbar{
+  justify-content: flex-start !important;
+  ion-button{
+    --background: none;
+    --box-shadow:none;
+    --width:10px !important;
+  }
+  ion-icon{
+    font-size: 25px !important;
+    margin-right: 18px;
+  }
+  h2{
+    margin: -3px 0 0 0 !important;
+  }
+}
+
+.Content{
+  label{
+    padding:45px 15px 0 15px ;
+  }
+  ion-label{
+    font-size: 18px;
+  }
+  padding: 50px 25px 0 25px !important;
+  ion-icon{
+    color: #334FDF;
+  }
+  // .Start_aligner{
+
+  // }
+}

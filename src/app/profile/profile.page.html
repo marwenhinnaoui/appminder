@@ -1,0 +1,33 @@
+<app-notification id="Notification_modal_profile"></app-notification>
+<ion-toolbar class="Toolbar">
+  <ion-title>
+    <div class="Navbar">
+      <h2>Profil</h2>
+      <ion-button (click)="onNotification();" id="Notification">
+        <ion-icon class="Notifications" name="notifications"></ion-icon>
+        <ion-label></ion-label>
+        <ion-badge class="Badge" color="danger">6</ion-badge>
+      </ion-button>
+    </div>
+    <div class="Profile_info">
+      <div class="Profile_photo">
+        <img src="../../assets/profile.png" alt="">
+      </div>
+      <h4>Name LName</h4>
+    </div>
+  </ion-title>
+</ion-toolbar>
+<ion-content>
+  <div class="Content">
+
+    <div class="Flex Maj_setting" routerLink="/parametre">
+      <ion-icon name="settings-outline"></ion-icon><p>Mise à les paramètres</p>
+    </div>
+    <div class="Flex Help" routerLink="/reclamation">
+      <ion-icon name="information-circle-outline"></ion-icon><p>Centre d'aide</p>
+    </div>
+    <div class=" Flex Log_out">
+      <ion-icon name="log-out-outline"></ion-icon> <p>Déconnexion</p>
+    </div>
+  </div>
+</ion-content>

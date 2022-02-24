@@ -3,14 +3,39 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: '',
+    loadChildren: () => import('./navbottombar/navbottombar.module').then( m => m.NavbottombarPageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '',
     pathMatch: 'full'
   },
+  {
+    path: 'sendphoto',
+    loadChildren: () => import('./sendphoto/sendphoto.module').then( m => m.SendphotoPageModule)
+  },
+  {
+    path: 'reclamation',
+    loadChildren: () => import('./reclamation/reclamation.module').then( m => m.ReclamationPageModule)
+  },
+  {
+    path: 'parametre',
+    loadChildren: () => import('./majparametre/majparametre.module').then( m => m.MajparametrePageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
+  },
+  {
+    path: 'historique',
+    loadChildren: () => import('./historiquereclamation/historiquereclamation.module').then( m => m.HistoriquereclamationPageModule)
+  },
+  {
+    path: 'detailreclamation/:id',
+    loadChildren: () => import('./detailreclamation/detailreclamation.module').then( m => m.DetailreclamationPageModule)
+  },
+
 ];
 
 @NgModule({

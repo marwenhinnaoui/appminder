@@ -1,27 +1,76 @@
-#container {
-  text-align: center;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+#Notification_modal_home{
+  display: none;
+}
+.Progress_container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .Progress{
+    margin-top: 15px;
+    margin-bottom: 16px;
+    background-color: rgb(204, 204, 204);
+    width: 80%;
+    height: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    #Progress_bar{
+      width: 0;
+      height:100%;
+    }
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.Current_aligner_home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 12px 15px -7px rgb(0 0 0 / 7%);
+  height: 70px;
+
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+ion-content{
+  ion-fab-button{
+    --background: #334FDF;
+  }
+  .Content{
 
-  color: #8c8c8c;
+    padding-bottom: 20px !important;
+    .Home_content{
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      ion-button{
+        --background:#334FDF;
+        width: 45%;
+      }
+    }
+    // .Reclamation{
+    //   margin-top: 38px;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   align-items: center;
 
-  margin: 0;
+    // }
+  }
+
 }
 
-#container a {
-  text-decoration: none;
+.Float_button{
+  margin: 0 10px 10px 10px;
+}
+/*************/
+ion-fab{
+  margin-top: 25px !important;
+  ion-icon{
+    color: #fff !important;
+    font-size: 23px;
+  }
 }

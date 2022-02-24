@@ -1,0 +1,60 @@
+<app-notification id="Notification_modal_progress"></app-notification>
+<ion-toolbar class="Toolbar">
+    <ion-title>
+      <div class="Navbar">
+      <h2>Progress</h2>
+      <ion-button (click)="onNotification();" id="Notification">
+        <ion-icon class="Notifications" name="notifications"></ion-icon>
+        <ion-label></ion-label>
+        <ion-badge class="Badge" color="danger">6</ion-badge>
+      </ion-button>
+    </div>
+    </ion-title>
+</ion-toolbar>
+
+<ion-content>
+  <ion-grid class="Content">
+
+    <swiper (slideChange)="onSwiper()" #swiper>
+      <ng-template *ngFor="let Aligner of alignersArray" swiperSlide>
+        <ion-row class="Aligners_slide" size="12">
+          <ion-button (click)="swiperPrev()" ion-button><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+          <p *ngIf="isSwiper">Aligner {{alignerIndex+1}}</p>
+          <p *ngIf="!isSwiper">Aligner {{alignerIndexClick+1}}</p>
+          <ion-button (click)="swiperNext()" ion-button>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-row>
+        <div class="timeline">
+          <ul>
+            <li>
+              <div class="bullet pink"></div>
+              <div class="time">28 DEC</div>
+              <div class="desc">
+                <h3>Heure</h3>
+                <h4>Resultat</h4>
+              </div>
+            </li>
+            <li>
+              <div class="bullet orange"></div>
+              <div class="time">29 DEC</div>
+              <div class="desc">
+                <h3>Heure</h3>
+                <h4>Resultat</h4>
+              </div>
+            </li>
+            <li>
+              <div class="bullet green"></div>
+              <div class="time">30 DEC</div>
+              <div class="desc">
+                <h3>Heure</h3>
+                <h4>Resultat</h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+    </ng-template>
+  </swiper>
+  </ion-grid>
+</ion-content>

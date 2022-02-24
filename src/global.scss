@@ -11,6 +11,10 @@
 
 /* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
 
 /* Basic CSS for apps built with Ionic */
 @import "~@ionic/angular/css/normalize.css";
@@ -24,3 +28,85 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+h2,h3{
+  font-weight: 900;
+}
+.Toolbar{
+  --background:#334FDF !important;
+  --color:#fff !important;
+  height: 100px;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.Navbar{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+}
+
+ion-content{
+  --background:#334FDF !important;
+  .Content {
+    position: relative;
+    background: #fff;
+    border-radius: 20px 20px 0 0 !important;
+    padding: 0 !important;
+    height: 100%;
+    overflow-y: scroll;
+    .Reclamation_icon{
+      --background:#334FDF !important;
+      margin-top: 8px;
+      width: 55px !important;
+      height: 55px !important;
+      --border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      ion-icon{
+        color: #fff;
+        font-size: 25px;
+      }
+  }
+  }
+
+  }
+
+  .Custom_card{
+      width: 90%;
+      height: auto;
+      background-color: #fff;
+      margin-bottom: 15px;
+      box-shadow: 0 12px 15px -7px rgb(0 0 0 / 7%);
+      padding: 0 10px;
+  }
+  .calendar-month{
+  height: 100vh !important;
+}
+
+.Badge{
+  border-radius: 50% !important;
+  width: 18.5px;
+  height: 18.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 14px;
+  top: 2px;
+}
+.Notifications{
+  font-size: 23px !important;
+}
+
+
+.Toolbar{
+  ion-button {
+    --background:#334FDF !important;
+    --box-shadow:none !important;
+  }
+  }

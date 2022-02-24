@@ -1,0 +1,35 @@
+<ion-toolbar class="Toolbar">
+  <ion-title>
+    <div class="Navbar">
+        <ion-icon name="arrow-back" (click)="navBack()">
+        </ion-icon>
+        <h2>Reclamation</h2>
+    </div>
+  </ion-title>
+</ion-toolbar>
+
+<ion-content>
+  <div class="Content">
+    <div class="Title_reclamation">
+      <h3>Tu as un problème!</h3>
+      <h4>Envoyer une réclamation</h4>
+    </div>
+      <ion-item>
+        <ion-label>Sélectionnez aligner</ion-label>
+        <ion-select class="custom-options">
+          <ion-select-option value="">Aligner 1</ion-select-option>
+          <ion-select-option value="">Aligner 2</ion-select-option>
+          <ion-select-option value="">Autre</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <div>
+        <ion-input #sujet (ionChange)="onInputChange(sujet.value)" placeholder="Sujet"></ion-input>
+        <ion-textarea #description (ionChange)="onInputDescChange(description.value)" placeholder="Sujet" placeholder="Description"></ion-textarea>
+      </div>
+      <div class="Send_reclamation">
+        <ion-button (click)="onAlert();sendData(id,sujet.value,description.value, 'sdsd');" class="Reclamation_icon" [disabled]="!isValidSujet || !isValid" >
+        <ion-icon name="paper-plane"></ion-icon>
+        </ion-button>
+      </div>
+  </div>
+</ion-content>

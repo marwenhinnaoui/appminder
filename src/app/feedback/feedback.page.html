@@ -1,0 +1,52 @@
+<app-notification id="Notification_modal_feedback"></app-notification>
+<ion-toolbar class="Toolbar">
+  <ion-title>
+    <div class="Navbar">
+      <h2>Feedback</h2>
+      <ion-button (click)="onNotification();" id="Notification">
+        <ion-icon class="Notifications" name="notifications"></ion-icon>
+        <ion-label></ion-label>
+        <ion-badge class="Badge" color="danger">6</ion-badge>
+      </ion-button>
+  </div>
+  </ion-title>
+</ion-toolbar>
+<ion-content>
+  <ion-grid class="Content">
+    <ion-row class="Current_feedback">
+      <div class="Image" *ngIf="image === null">
+        <img src="../../assets/face-1.jpg" alt="">
+      </div>
+      <div class="Image_details" *ngIf="image === null">
+        <h2>Aligner 4</h2>
+        <p>
+          28 DEC 2022
+        </p>
+        <ion-button>Resultat</ion-button>
+      </div>
+      <ion-col size="8" class="Image" *ngIf="image !== null">
+        <img [src]="" alt="">
+      </ion-col>
+    </ion-row>
+    <h4>Feedback History</h4>
+    <ion-row class="Feedback_history">
+      <div class="Custom_card">
+        <div class="Image_history">
+          <img src="../../assets/face-1.jpg" alt="">
+        </div>
+        <div class="Card_container">
+          <div class="Card_info">
+            <h5>On Track</h5>
+            <p class="Offset"></p>
+            <p>
+              28 DEC 2022
+            </p>
+          </div>
+          <ion-button class="Card_more_details">
+            <ion-icon name="arrow-forward"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
+    </ion-row>
+  </ion-grid>
+</ion-content>

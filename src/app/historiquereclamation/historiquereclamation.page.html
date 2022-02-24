@@ -1,0 +1,39 @@
+<ion-toolbar class="Toolbar">
+  <ion-title>
+    <div class="Navbar">
+        <ion-icon name="arrow-back" routerLink="/home">
+        </ion-icon>
+        <h2>Historique</h2>
+    </div>
+  </ion-title>
+</ion-toolbar>
+<ion-content>
+<div class="Content">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/reclamation">
+      <ion-icon name="paper-plane"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <div class="Custom_card" *ngFor="let data of listSujet">
+    <div class="Card_container">
+      <div class="Card_info">
+        <div class="Rec_time">
+        <h5>
+          28
+        </h5>
+          <h5>
+          DEC
+        </h5>
+      </div>
+        <h5 class="Sujet">{{data.sujet}}</h5>
+      </div>
+      <ion-button *ngIf="data.doctorReply" color="success" (click)="details(data.id)" class="Card_more_details">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="!data.doctorReply" color="danger" (click)="details(data.id)" class="Card_more_details">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</div>
+</ion-content>

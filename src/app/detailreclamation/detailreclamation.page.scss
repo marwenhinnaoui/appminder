@@ -1,0 +1,42 @@
+.Navbar{
+  justify-content: flex-start !important;
+  ion-button{
+    --background: none;
+    --box-shadow:none;
+    --width:10px !important;
+  }
+  ion-icon{
+    font-size: 25px !important;
+    margin-right: 18px;
+  }
+  h2{
+    margin: -3px 0 0 0 !important;
+  }
+}
+.Content{
+  padding: 4px!important;
+  .Reclamation_box{
+    box-shadow: 0 12px 15px -7px rgb(0 0 0 / 7%);
+    padding: 10px ;
+    .Flex{
+      display: flex;
+      align-items: center;
+    }
+    span{
+      font-size: 17px;
+    }
+    .user-img {
+      border-radius: 50%;
+      height: 50px;
+      width: 50px ;
+      margin: 0 10px 0 0;
+  }
+    >p{
+      margin-top: 10px;
+      font-size: 20px ;
+    }
+  }
+  .Doctor_reply{
+    margin-top: 70px;
+  }
+}

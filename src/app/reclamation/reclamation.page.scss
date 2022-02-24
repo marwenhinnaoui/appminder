@@ -1,0 +1,45 @@
+.Navbar{
+  justify-content: flex-start !important;
+  ion-button{
+    --background: none;
+    --box-shadow:none;
+    --width:10px !important;
+  }
+  ion-icon{
+    font-size: 25px !important;
+    margin-right: 18px;
+  }
+  h2{
+    margin: -3px 0 0 0 !important;
+  }
+}
+.Content{
+  position: relative;
+  padding: 16px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .Title_reclamation{
+    h3,h4{
+      font-size: 32px !important;
+    }
+  }
+  ion-input,
+  ion-textarea{
+    border: 1px solid #777;
+    border-radius: 10px !important;
+    margin-top: 40px !important;
+  }
+  ion-textarea{
+    height: 120px !important;
+  }
+  .Reclamation_icon{
+    margin-top: 40px;
+    text-align: right !important;
+  }
+  .Send_reclamation{
+    display: flex;
+    justify-content: flex-end;
+  }
+}

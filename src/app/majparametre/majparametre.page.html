@@ -1,0 +1,45 @@
+<ion-toolbar class="Toolbar">
+  <ion-title>
+    <div class="Navbar">
+      <ion-icon name="arrow-back" routerLink="/profile"></ion-icon>
+        <h2>Paramètre</h2>
+    </div>
+  </ion-title>
+</ion-toolbar>
+
+<ion-content>
+  <div class="Content">
+    <div class="Start_aligner">
+      <ion-item id="Aligner_list">
+        <ion-label>Sélectionnez aligner</ion-label>
+        <ion-select class="custom-options">
+          <ion-select-option value="">Aligner 1</ion-select-option>
+          <ion-select-option value="">Aligner 2</ion-select-option>
+          <ion-select-option value="">Autre</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <label for="open-date-input"><h4>Date debut de traitement</h4></label>
+      <ion-item button="true" id="open-date-input">
+        <ion-label><ion-icon name="calendar" color="primary"></ion-icon></ion-label>
+        <ion-text slot="end">{{ dateValue }}</ion-text>
+        <ion-popover trigger="open-date-input" show-backdrop="false">
+          <ng-template>
+            <ion-datetime
+              #popoverDatetime
+              presentation="date"
+              (ionChange)="dateValue = formatDate(popoverDatetime.value)"
+            ></ion-datetime>
+          </ng-template>
+        </ion-popover>
+      </ion-item>
+    </div>
+    <!-- <div class="">
+      <label for="open-date-input"><h4>Date debut de traitement</h4></label>
+    </div> -->
+    <label for="Range"><h4>Nombre d'heure maximum</h4></label>
+      <ion-range #range id="Range" value="22" min="0" max="22" color="primary" (ionChange)="onRangerChange(range.value)">
+        <ion-label slot="start">0</ion-label>
+        <ion-label slot="end">{{rangeValue}}</ion-label>
+      </ion-range>
+  </div>
+</ion-content>
