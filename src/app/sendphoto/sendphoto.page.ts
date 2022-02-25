@@ -11,10 +11,21 @@ import { NavController } from '@ionic/angular';
 export class SendphotoPage implements OnInit {
   image=null;
   cameraActive=false;
-  images=[null, null, null];
-  counter=4;
-  isFilter=null;
-  index=null;
+  images=[
+    {
+      imageFiltre: '../../assets/face-1.jpg',
+      imageCamera:null
+    },
+    {
+      imageFiltre: '../../assets/face-2.jpg',
+      imageCamera:null
+    },
+    {
+      imageFiltre: '../../assets/face-3.jpg',
+      imageCamera:null
+    }
+  ];
+  counter=null;
   constructor(private navCrtl: NavController) { }
 
   ngOnInit() {}
@@ -30,9 +41,9 @@ getCamera(index){
     position: 'rear',
     toBack:true
   };
-  this.index=index;
   CameraPreview.start(cameraPreviewOptions);
   this.cameraActive=true;
+  this.counter=index;
 }
 
 
@@ -43,19 +54,16 @@ flipCamera(){
 stopCamera(){
   CameraPreview.stop();
   this.cameraActive=false;
-  this.counter=null;
 }
 
-async takePicture(){
+async takePicture(index){
   const cameraSampleOptions: CameraSampleOptions = {
     quality: 50,
   };
   const result = await CameraPreview.captureSample(cameraSampleOptions);
-  this.images[this.index] = `data:image/png;base64,${result.value}`;
+  this.images[index].imageCamera= `data:image/png;base64,${result.value}`;
   this.cameraActive=false;
   CameraPreview.stop();
-  console.log(this.counter);
-  this.index=null;
 }
 navBack(){
   this.navCrtl.back();

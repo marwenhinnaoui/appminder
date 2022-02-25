@@ -54,12 +54,12 @@
 }
 .Content{
   padding: 5px !important;
+  height: 100% !important;
   ion-grid{
     height: 100% !important;
   }
   ion-row{
     display: flex !important;
-    height: 100% !important;
   }
   .Card{
     display: flex;
@@ -75,10 +75,15 @@
     }
     >ion-icon{
       position: absolute;
-      color: #fff;
       font-size: 40px !important;
       text-align: center;
       right: 0;
+    }
+    ion-icon.Done{
+      color: var(--ion-color-success);
+    }
+    ion-icon.Add{
+      color: #fff;
     }
   }
 }

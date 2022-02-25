@@ -10,34 +10,26 @@
 <ion-content *ngIf="!cameraActive">
   <div class="Content">
   <ion-grid >
-    <ion-row class="ion-justify-content-center">
-      <ion-col class="Card" size="7" (click)="getCamera(0)">
-        <img [src]="images[0]" (click)="getCamera(0)" alt="">
-        <img src="../../assets/face-1.jpg" alt="">
-          <ion-icon name="add-circle"></ion-icon>
+    <ion-row *ngFor="let item of images; let i = index" class="ion-justify-content-center">
+      <ion-col class="Card" size="7" (click)="getCamera(i)">
+        <img  [src]="item.imageCamera" (click)="getCamera(i)" alt="">
+        <img *ngIf="item.imageCamera === null" [src]="item.imageFiltre" alt="">
+          <ion-icon class="Add" *ngIf="item.imageCamera === null" name="add-circle"></ion-icon>
+          <ion-icon class="Done" *ngIf="item.imageCamera !== null" name="checkmark-done-circle"></ion-icon>
       </ion-col>
-      <ion-col class="Card" size="7">
-        <img src="../../assets/face-2.jpg" (click)="getCamera(1)" alt="">
-        <img [src]="images[index]" (click)="getCamera(2)" alt="">
-          <ion-icon name="add-circle"></ion-icon>
-      </ion-col>
-      <ion-col class="Card" size="7">
-        <img src="../../assets/face-3.jpg" (click)="getCamera(2)" alt="">
-        <img [src]="images[index]" (click)="getCamera(2)"  alt="">
-          <ion-icon name="add-circle"></ion-icon>
-      </ion-col>
+
     </ion-row>
   </ion-grid>
 
   </div>
   </ion-content>
 <div class="cameraPreview" id="cameraPreview" *ngIf="cameraActive">
-  <img src="../../assets/filter-1.png" *ngIf="index===0" alt="">
-  <img src="../../assets/filter-2.png" *ngIf="index===1" alt="" alt="">
-  <img src="../../assets/filter-3.png" *ngIf="index===2" alt="" alt="">
+  <img src="../../assets/filter-1.png" *ngIf="counter===0" alt="">
+  <img src="../../assets/filter-2.png" *ngIf="counter===1" alt="" alt="">
+  <img src="../../assets/filter-3.png" *ngIf="counter===2" alt="" alt="">
   <div class="Buttons">
     <ion-button (click)="flipCamera()"><ion-icon name="camera-reverse"></ion-icon></ion-button>
-    <ion-button class="Take_Picture" (click)="takePicture()"><ion-icon name="camera"></ion-icon></ion-button>
+    <ion-button class="Take_Picture" (click)="takePicture(counter)"><ion-icon name="camera"></ion-icon></ion-button>
     <ion-button (click)="stopCamera()"><ion-icon name="stop-circle"></ion-icon></ion-button>
   </div>
 </div>
