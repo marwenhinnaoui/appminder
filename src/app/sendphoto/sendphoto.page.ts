@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CameraPreviewOptions, CameraPreview, CameraOpacityOptions, CameraSampleOptions } from '@capacitor-community/camera-preview';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-sendphoto',
@@ -12,11 +14,12 @@ export class SendphotoPage implements OnInit {
   images=[null, null, null];
   counter=4;
   isFilter=null;
-  constructor() { }
+  index=null;
+  constructor(private navCrtl: NavController) { }
 
   ngOnInit() {}
 
-getCamera(){
+getCamera(index){
   const cameraPreviewOptions: CameraPreviewOptions = {
     x:0,
     y:0,
@@ -27,6 +30,7 @@ getCamera(){
     position: 'rear',
     toBack:true
   };
+  this.index=index;
   CameraPreview.start(cameraPreviewOptions);
   this.cameraActive=true;
 }
@@ -47,11 +51,14 @@ async takePicture(){
     quality: 50,
   };
   const result = await CameraPreview.captureSample(cameraSampleOptions);
-  this.images[this.counter] = `data:image/png;base64,${result.value}`;
+  this.images[this.index] = `data:image/png;base64,${result.value}`;
   this.cameraActive=false;
   CameraPreview.stop();
   console.log(this.counter);
-
+  this.index=null;
+}
+navBack(){
+  this.navCrtl.back();
 }
 
 }

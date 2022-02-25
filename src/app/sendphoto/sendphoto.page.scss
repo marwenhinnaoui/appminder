@@ -1,9 +1,84 @@
-*{
-  background: transparent !important;
+.Navbar{
+  justify-content: flex-start !important;
+  ion-button{
+    --background: none;
+    --box-shadow:none;
+    --width:10px !important;
+  }
+  ion-icon{
+    font-size: 25px !important;
+    margin-right: 18px;
+  }
+  h2{
+    margin: -3px 0 0 0 !important;
+  }
 }
 .cameraPreview {
   display: flex;
   width: 100%;
   height: 100%;
-  position: absolute;
+  >img{
+    object-fit: contain;
+    width: 100%;
+  }
+  .Buttons{
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    background: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    ion-button{
+      padding: 0 !important;
+      --background: #334FDF !important;
+      --border-radius:50% !important;
+      ion-icon{
+        font-size: 70px !important;
+      }
+    }
+    .Take_Picture{
+
+      width: 65px ;
+      height: 65px ;
+    }
+    > ion-button:not(.Take_Picture){
+      width: 55px ;
+      height: 55px ;
+    }
+  }
+
+}
+.Content{
+  padding: 5px !important;
+  ion-grid{
+    height: 100% !important;
+  }
+  ion-row{
+    display: flex !important;
+    height: 100% !important;
+  }
+  .Card{
+    display: flex;
+    overflow: hidden;
+    padding: 0 !important;
+    border-radius: 20px;
+    background-color: #000;
+    height: 230px;
+    margin-bottom: 10px;
+    >img{
+      width: 100%;
+      object-fit: cover;
+    }
+    >ion-icon{
+      position: absolute;
+      color: #fff;
+      font-size: 40px !important;
+      text-align: center;
+      right: 0;
+    }
+  }
 }

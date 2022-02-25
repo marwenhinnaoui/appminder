@@ -1,8 +1,6 @@
 #Notification_modal_progress{
   display: none;
 }
-
-
 ion-content {
   ion-button{
     --background:none !important;
@@ -29,9 +27,8 @@ ion-content {
     margin:0 !important;
   }
   .Content {
-    swiper{
+    .swiper{
       .timeline {
-
         ul {
           margin: 0;
           list-style: none;
@@ -44,7 +41,7 @@ ion-content {
             background-color: rgb(97, 97, 97);
             position: absolute;
 
-            left: 2.5em;
+            left: 47px;
             z-index: -1;
           }
         }

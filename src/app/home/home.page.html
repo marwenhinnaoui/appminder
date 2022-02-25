@@ -13,7 +13,7 @@
   </ion-title>
 </ion-toolbar>
 <ion-content>
-  <ion-fab vertical="bottom" horizontal="end" class="Float_button">
+  <ion-fab vertical="bottom" horizontal="end" >
     <ion-fab-button *ngIf="isStart || timeHours === timeTotal " id="play"  (click)="start()">
       <ion-icon  name="play" ></ion-icon>
     </ion-fab-button>
@@ -42,7 +42,7 @@
       </ion-button>
       <div class="Reclamation">
 
-        <ion-fab vertical="end" horizontal="end" slot="fixed" class="Float_button">
+        <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="Float_button">
           <ion-fab-button>
             <ion-icon name="paper-plane"></ion-icon>
           </ion-fab-button>
